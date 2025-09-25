@@ -1,0 +1,415 @@
+/* Define margens e padding padrão, e define box-sizing para border-box */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Garante que a página ocupe toda a altura da tela */
+    overflow-x: hidden;  /* Remove a barra de rolagem horizontal */
+    overflow-y: auto;  /* Permite a rolagem vertical */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #161515;
+}
+
+
+
+/* Estilo do contêiner principal */
+.container {
+    width: 95%; /* Largura de 95% do contêiner pai */
+    max-width: 1200px; /* Largura máxima de 1200px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 24px; /* Padding interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo das tabelas */
+table {
+    border-collapse: collapse; /* Remove espaços entre as células */
+    width: 100%; /* Largura total da tabela */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    margin-bottom: 24px; /* Espaço abaixo da tabela */
+}
+
+/* Estilo das células da tabela */
+th, td {
+    border: 1px solid black; /* Borda das células */
+    padding: 12px; /* Padding interno das células */
+    text-align: center; /* Centraliza o texto */
+    vertical-align: middle; /* Alinha verticalmente ao centro */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilo dos campos de entrada */
+input {
+    /*width: 90%;  Largura dos campos */
+    /*height: 12px;  Altura dos campos */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do rodapé */
+footer {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do logotipo */
+.logo {
+    width: 200px; /* Largura do logotipo */
+    text-align: center; /* Centraliza o logotipo */
+}
+
+.logo img {
+    max-width: 100%; /* Largura máxima de 100% */
+    height: auto; /* Altura automática */
+}
+
+/* Estilo do título */
+.title {
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-align: center; /* Centraliza o texto */
+    border: 1px solid black; /* Borda ao redor do título */
+    padding: 12px; /* Padding interno */
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Estilo do conteúdo */
+.content {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: space-between; /* Espaça os itens igualmente */
+}
+
+/* Estilo do separador de linha */
+.line-separator {
+    border-bottom: 1px solid black; /* Borda inferior */
+    margin: 0; /* Remove margens */
+    padding: 4px 0; /* Padding interno */
+}
+
+/* Espaço no cabeçalho */
+.header-space {
+    margin-bottom: 24px; /* Espaço abaixo do cabeçalho */
+}
+
+/* Estilo das células da tabela de itens */
+.table-items {
+    width: 100%; /* Largura total da tabela */
+}
+
+.table-items td {
+    padding: 12px; /* Padding interno das células */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo dos rótulos */
+.label {
+    font-weight: bold; /* Texto em negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding-left: 5px; /* Padding à esquerda */
+    font-size: 14px; /* Tamanho da fonte */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+/* Estilo das células com borda */
+.bordered-cell {
+    border: 1px solid black; /* Borda das células */
+    padding: 0; /* Remove padding */
+    background-color: transparent; /* Fundo transparente */
+    width: 100px; /* Largura das células */
+}
+
+/* Estilo do espaço de entrada */
+.input-space {
+    padding: 0; /* Remove padding */
+    min-width: 1px; /* Largura mínima */
+    border: 1px solid black; /* Borda das células */
+}
+
+/* Estilo da assinatura */
+.signature {
+    margin-top: 20px; /* Espaço acima da assinatura */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 20px; /* Tamanho da fonte */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Estilo dos resultados da tabela */
+.table-results {
+    margin-top: 20px; /* Espaço acima da tabela */
+}
+
+/* Estilo dos campos editáveis */
+.editable-input {
+    border: none; /* Remove a borda */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Largura total */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: transparent; /* Fundo transparente */
+    resize: none; /* Remove a opção de redimensionar */
+    overflow: hidden; /* Remove a barra de rolagem */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+}
+
+/* Estilo dos campos editáveis centralizados */
+.editable-input-center {
+    text-align: center; /* Centraliza o texto */
+    width: 50px; /* Largura dos campos */
+}
+
+/* Estilo dos campos editáveis ao focar */
+.editable-input:focus {
+    outline: none; /* Remove o contorno */
+}
+
+/* Estilo do espaço de entrada à esquerda */
+.input-space-left {
+    border-left: none; /* Remove a borda esquerda */
+}
+
+/* Estilo dos campos de assinatura */
+.signature-input {
+    border: none; /* Remove a borda */
+    border-bottom: 1px solid black; /* Borda inferior */
+    width: 200px; /* Largura dos campos */
+    font-size: 14px; /* Tamanho da fonte */
+    background-color: transparent; /* Fundo transparente */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo dos campos de assinatura ao focar */
+.signature-input:focus {
+    outline: none; /* Remove o contorno */
+}
+
+/* Estilo do rodapé */
+.footer {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin-top: 20px; /* Espaço acima do rodapé */
+}
+
+/* Estilo do botão de impressão */
+.no-print {
+    background-color: #4cbb5b; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 7px 18px; /* Padding interno para tornar o botão mais espaçoso */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 17px; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    /*text-transform: uppercase;  Transforma o texto em maiúsculas */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    margin: 8px; /* Margem ao redor do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para realce */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+/* Estilo do botão de impressão ao passar o mouse */
+.no-print:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+/* Botão "Início" - Estilo Geral */
+.btn-inicio {
+    background-color: #4cbb5b; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 7px 18px; /* Padding interno para tornar o botão mais espaçoso */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    /*text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    margin: 10px; /* Margem ao redor do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para realce */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+/* Botão "Início" - Hover (ao passar o mouse) */
+.btn-inicio:hover {
+    background-color: #096b00; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+/* Estilo do botão de voltar */
+.btn-voltar {
+    background-color: #4cbb5b; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 7px 18px; /* Padding interno para tornar o botão mais espaçoso */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    /*text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    margin: 10px; /* Margem ao redor do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para realce */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+
+}
+
+.btn-voltar:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+/* Estilo base para o seletor */
+select#param3 {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #4CAF50; /* Verde padrão */
+    border-radius: 8px;
+    background-color: #000000;
+    color: #000000;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo para quando a opção "Reprovado" é selecionada */
+select#param3.Reprovado {
+    border-color: #FF0000; /* Vermelho */
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+/* Estilo ao passar o mouse */
+select#param3:hover {
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo ao focar */
+select#param3:focus {
+    box-shadow: 0 0 8px rgba(62, 142, 65, 0.6);
+}
+
+/* Opções dentro do seletor */
+select#param3 option {
+    font-size: 14px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+
+/* Estilo de impressão */
+@media print {
+    body {
+        margin: 0;
+        
+    }
+
+   /* header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    */
+    header {
+        position: fixed; /* Garante que o cabeçalho permaneça fixo durante a impressão */
+        top: 0; /* Fixa o cabeçalho no topo */
+        left: 0; /* Alinha à esquerda */
+        right: 0; /* Alinha à direita */
+    }
+}
+
+    .container {
+        margin-top: 2em;
+        margin-bottom: 5em;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .signature {
+        position: fixed;
+        bottom: 0;
+        page-break-before: always;
+    }
+
+    @page {
+        margin: 100px 0;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Alinha verticalmente a foto e o texto */
+        text-align: center; /* Centraliza o texto */
+        
+    }
+    
+    .foto-rodape {
+        width: 20px; /* Tamanho da imagem */
+        height: 20px; /* Tamanho da imagem */
+        border-radius: 50%; /* Torna a imagem redonda */
+        margin: 0 8px; /* Espaço entre a imagem e o texto */
+    }
+    
+    
+    footer a {
+        color: green; /* Altera a cor do link para verde */
+        text-decoration: none; /* Remove o sublinhado, se desejar */
+    }
+    
+    footer a:hover {
+        color: darkgreen; /* Altera a cor quando o link for hover (passar o mouse) */
+    }
+    
+    
+    @media print {
+        table, th, td {
+            background-color: white !important; /* Garante que o fundo seja branco */
+            color: black !important; /* Garante que o texto seja preto */
+        }
+    }
+    
+ 
+
+
+    
+
+
+    
+    
+
+
+    /* inicio campo adicionado para ver se vai fixar o cabeçalho
+    @media print {
+        header {
+            position: fixed; Garante que o cabeçalho permaneça fixo durante a impressão 
+            top: 0;  Fixa o cabeçalho no topo 
+            left: 0;  Alinha à esquerda 
+            right: 0;  Alinha à direita 
+        }
+    }
+    fim campo adicionado para ver se vai fixar o cabeçalho*/

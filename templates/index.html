@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3474/3474056.png" type="image/x-icon">
+    <title>Conversor Datalogger</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <style>
+        .popup {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s, top 0.5s;
+        }
+        .popup.show {
+            opacity: 1;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Conversor!</h1>
+        <p>Para extrair os dados, clique nos botões abaixo.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <div class="file-upload">
+                <input type="file" id="fileInput" name="file" style="display: none;" />
+                <button type="button" id="selectButton">Selecionar Planilha</button>
+                <button type="submit">Filtrar Resultados</button>
+            </div>
+            <div id="fileInfo" class="file-info" style="display: none;">
+                <span id="fileName" class="file-name"></span>
+                <button type="button" id="cancelButton" class="cancel-button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="popup" class="popup">Planilha selecionada com sucesso!</div>
+    
+    <a href="https://ourofino.freshservice.com/" target="_blank" class="help-button">Ajuda</a>
+
+    <script>
+        const selectButton = document.getElementById('selectButton');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const cancelButton = document.getElementById('cancelButton');
+        const popup = document.getElementById('popup');
+
+        selectButton.addEventListener('click', function() {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                fileName.innerHTML = 'Planilha: ' + fileInput.files[0].name + 
+                    ' <img src="https://cdn-icons-png.flaticon.com/512/4726/4726040.png" alt="Ícone" style="width:27px; height:27px; vertical-align:middle; margin-left:5px;">';
+                fileInfo.style.display = 'flex';
+                
+                popup.classList.add('show');
+                setTimeout(() => {
+                    popup.classList.remove('show');
+                }, 3000);
+            }
+        });
+
+        cancelButton.addEventListener('click', function() {
+            fileInput.value = '';
+            fileInfo.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Reset de margens e paddings padrão, e define box-sizing para border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura da página como 100% da altura da janela */
+    background: url('/static/images/imagemfundo.JPG') no-repeat center center fixed; /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
+}
+
+/* Estilo do contêiner principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao redor do contêiner */
+    padding: 30px 30px 10px 30px; /* Padding interno */
+    width: 90%; /* Largura de 90% do contêiner pai */
+    max-width: 500px; /* Largura máxima de 500px */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do título principal */
+h1 {
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    font-size: 2em; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    /*font-size: 24px; /* Tamanho inicial */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+h1:hover {
+    transform: scale(1.2); /* Aumenta 20% ao passar o mouse */
+}
+
+/* Estilo dos parágrafos */
+p {
+    font-size: 1.2em; /* Tamanho da fonte */
+    color: #000000; /* Cor do texto */
+    margin-bottom: 25px; /* Espaço abaixo do parágrafo */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #4cbb5b; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 7px 18px; /* Padding interno para tornar o botão mais espaçoso */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    /*text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    margin: 10px; /* Margem ao redor do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para realce */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+/* Estilo dos botões ao passar o mouse */
+button:hover {
+    background-color: #096b00; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+/* Estilo do contêiner de upload de arquivos */
+.file-upload {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaço entre os itens */
+    margin-bottom: 20px; /* Espaço abaixo do contêiner */
+}
+
+/* Estilo das informações do arquivo */
+.file-info {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 5px; /* Espaço entre os itens */
+    margin-top: 5px; /* Espaço acima do contêiner */
+    margin-bottom: 5px; /* Espaço abaixo do contêiner */
+}
+
+/* Estilo do nome do arquivo */
+.file-name {
+    color: #000000; /* Cor do texto */
+    font-size: large; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo do botão de cancelar */
+.cancel-button {
+    background-color: #f44336; /* Cor de fundo */
+    font-size: 1em; /* Tamanho da fonte */
+    padding: 5px 10px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* Estilo do botão de cancelar ao passar o mouse */
+.cancel-button:hover {
+    background-color: #d32f2f; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta 10% */
+    transition: transform 0.2s ease; /* Transição suave */
+}
+
+/* Estilo do botão de ajuda */
+.help-button {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 15px; /* Distância da parte inferior */
+    right: 20px; /* Distância da parte direita */
+    background-color: #4cbb5b; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove a decoração do texto */
+    padding: 12px 25px; /* Padding interno */
+    border-radius: 10%; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do botão */
+    font-size: 1em; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de ajuda ao passar o mouse */
+.help-button:hover {
+    background-color: #d43f3f; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta 10% */
+    transition: transform 0.2s ease; /* Transição suave */
+}
